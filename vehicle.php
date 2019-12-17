@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-  <title>Admin</title>
+  <title>Vehicles</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
@@ -37,13 +37,13 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item active ">
-            <a class="nav-link" href="admin.php">
-              <i class="material-icons">person</i>
-              <p>Admins</p>
+          <li class="nav-item active">
+            <a class="nav-link" href="vehicle.php">
+              <i class="material-icons">directions_car</i>
+              <p>Vehicles</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="client.php">
               <i class="material-icons">people_alt</i>
               <p>Clients</p>
@@ -70,7 +70,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="#pablo">Admins</a>
+            <a class="navbar-brand" href="#pablo">Vehicles</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only"></span>
@@ -111,98 +111,18 @@
         <div class="container-fluid">
           <!-- your content here -->
           <div class="row">
-            <div class="col-md-5">
-              <div class="card">
-                <div class="card-header card-header-success">
-                  <h4 class="card-title"><i class="material-icons">person_add</i> Register Admin</h4>
-                  <p class="card-category">* Required Fields</p>
-                </div>
-                <div class="card-body">
-                  <form id="RegisterValidation">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">First Name*</label>
-                          <input type="text" class="form-control" name="firstname" required="true">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Last Name*</label>
-                          <input type="text" class="form-control" name="lastname" required="true">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">City Address</label>
-                          <input type="text" class="form-control" name="address" required="true">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Email*</label>
-                          <input type="email" class="form-control" name="email" required="true">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Phone No.*</label>
-                          <input type="text" class="form-control" name="phone" required="true">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Company Position*</label>
-                          <input type="text" class="form-control" name="position" required="true">
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">ID No.*</label>
-                          <input type="text" class="form-control" name="idno" required="true">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username*</label>
-                          <input type="text" class="form-control" name="username" required="true">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Password*</label>
-                          <input type="password" class="form-control" name="password" required="true">
-                        </div>
-                      </div>
-                    </div>
-                    <br>
-                    <button type="submit" class="btn btn-success btn-round">Register</button>
-                    <div class="clearfix"></div>
-                  </form>
-                </div>
-              </div>
-            </div>
             <div class="col-lg-7 col-md-16">
               <div class="card">
                 <div class="card-header card-header-warning">
-                  <h3 class="card-title">Registered Admins</h3>
+                  <h3 class="card-title">Registered Vehicles</h3>
                 </div>
                 <div class="card-body table-responsive">
                   <table class="table table-hover">
                     <thead class="text-warning">
                       <th>#</th>
-                      <th>Last Name</th>
-                      <th>First Name</th>
-                      <th>ID No</th>
-                      <th>Position</th>
+                      <th>Plate No.</th>
+                      <th>System ID</th>
+                      <th>Action</th>
                     </thead>
                     <tbody>
                       <tr></tr>
@@ -212,9 +132,34 @@
                 </div>
               </div>
             </div>
+            <div class="col-md-5">
+              <div class="card">
+                <div class="card-header card-header-info">
+                  <h4 class="card-title"><i class="material-icons">drive_eta</i> Update Vehicle Information</h4>
+                  <p class="card-category">* Required Field</p>
+                </div>
+                <div class="card-body">
+                  <form id="RegisterValidation">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Vehicle Plate no.*</label>
+                          <input type="text" class="form-control" name="plateno" required="true">
+                        </div>
+                      </div>
+                    <br>
+                    <button type="submit" class="btn btn-info btn-round pull-right">Update</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+        </div>
+      </div>
+      
       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">

@@ -37,9 +37,9 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="admin.php">
-              <i class="material-icons">person</i>
-              <p>Admins</p>
+            <a class="nav-link" href="vehicle.php">
+              <i class="material-icons">directions_car</i>
+              <p>Vehicles</p>
             </a>
           </li>
           <li class="nav-item ">
